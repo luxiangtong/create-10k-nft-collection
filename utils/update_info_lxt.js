@@ -28,7 +28,8 @@
   });
 
   data.forEach((item) => {
-    if (updateName) item.name = `${namePrefix} #${item.edition}`;
+    //if (updateName) item.name = `${namePrefix} #${item.edition}`;
+    if (updateName) item.name = `${namePrefix} #${item.custom_fields.edition}`;
     if (updateDescription) item.description = description;
     if (updateBaseUri) {
       item.image = `${baseUri}/${item.custom_fields.edition}.png`;
